@@ -1,7 +1,6 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
   MapIcon,
@@ -9,23 +8,13 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import chatPic from '../images/portfolio/ChatServerPic.png';
+import chessPic from '../images/portfolio/ChessPic.png'
+import FinLifePic from '../images/portfolio/FinLifePic.jpg';
+import Q2LPic from '../images/portfolio/Q2LPic.jpg'
+import swarmPic from '../images/portfolio/SwarmPic.png'
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -69,24 +58,21 @@ export type SectionId = typeof SectionId[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Michael Kim`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a <strong>Johns Hopkins University student</strong> majoring in <strong>Computer Science</strong>
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I am current interested in any <strong>Full-Stack/Artificial Intelligence</strong> work.
+        Please take a look at my resume and contact me if you are interested in working with me.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: 'https://drive.google.com/file/d/1MbNf99spevy2XDzFe64XtGmvRG4PQYoK/view?usp=sharing',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -103,17 +89,16 @@ export const heroData: Hero = {
  * About section
  */
 export const aboutData: About = {
-  profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I am a versatile engineer adept in both front-end and back-end web development. 
+  I thrive on collaborating with ambitious student-led initiatives, 
+  channeling my expertise into a diverse array of projects aimed at nurturing innovative products. 
+  Explore my portfolio to witness the seamless fusion of technology and creativity.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Ridefield, NJ', Icon: MapIcon},
+    {label: 'Age', text: '20', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Korean', Icon: FlagIcon},
+    {label: 'Interests', text: 'Technologies, Animation, Film', Icon: SparklesIcon},
+    {label: 'Study', text: 'John Hopkins University', Icon: AcademicCapIcon},
   ],
 };
 
@@ -121,23 +106,6 @@ export const aboutData: About = {
  * Skills section
  */
 export const skills: SkillGroup[] = [
-  {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
   {
     name: 'Frontend development',
     skills: [
@@ -150,8 +118,8 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'MaterialUI',
+        level: 5,
       },
     ],
   },
@@ -163,30 +131,38 @@ export const skills: SkillGroup[] = [
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'Express.js',
+        level: 7,
       },
       {
-        name: 'Golang',
+        name: 'Mern Stack/MongoDB',
         level: 4,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Coding Language',
     skills: [
       {
-        name: 'React Native',
+        name: 'Javascript',
+        level: 8,
+      },
+      {
+        name: 'Python',
+        level: 6,
+      },
+      {
+        name: 'C++',
+        level: 7,
+      },
+      {
+        name: 'Java',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
+        name: 'C#',
         level: 3,
-      },
+      }
     ],
   },
 ];
@@ -196,71 +172,34 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage1,
+    title: 'Augmented Reality Biology/Chemistry Labs',
+    description: 'A biology lab that is simulated in AR',
+    url: 'https://quest2learn.notion.site/Setting-up-Quest2Learn-1fa034552f6c4edab10e2b9a1deda24a',
+    image: Q2LPic,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage2,
+    title: 'FinLife: Personal Finance Tracker',
+    description: 'Project that keeps track of my personal finance (if link is not clickable, you can potentially check my github for demo)',
+    image: FinLifePic,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage3,
+    title: 'Fault Tolerant Multithreaded Chat Server',
+    description: 'A chat server that allows users to communicate to each other.',
+    url: 'https://drive.google.com/file/d/1thvRvaj1aILPll9B-a6HLIdEReRLiZkX/view',
+    image: chatPic,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage4,
+    title: 'Agent Swarming Simulation	',
+    description: 'A MatLab project where users can simulate swarms.',
+    url: 'https://drive.google.com/file/d/1k067ue9_-zLyhitjJ4ml471zULYUH4od/view',
+    image: swarmPic,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage5,
+    title: 'Chess Game',
+    description: 'Project that simulates the chess game between two players',
+    image: chessPic,
   },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage11,
-  },
+  
 ];
 
 /**
@@ -268,39 +207,54 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2025',
+    location: 'Baltimore, MD',
+    title: 'Johns Hopkins University',
+    content: <p>
+      Relevant Coursework: Advanced Algorithms, 
+      Artificial Intelligence, 
+      Computer Systems (C /C++), 
+      Data Structures and Algorithms (Java), 
+      Discrete Mathematics, 
+      Linear Algebra, 
+      Intermediate Programming (C/C++)</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'May. 2023 - Present',
+    location: 'Ohanasoft',
+    title: 'Web Developer/Consultant Assistant',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Effectively deployed data-driven websites on Oracle Cloud, optimizing data organization and presentation to meet clients’ unique needs.
+        Orchestrated comprehensive documentation detailing the construction of the application, ensuring transparency and facilitating future enhancements.
+        Conducted thorough SQL-based data analysis, delivering actionable insights and recommendations to clients.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'Feb. 2023 - May. 2023',
+    location: 'Teaching Tools',
+    title: 'Backend Developer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Built a website that auto generated lesson plans by sending prompts stored in MongoDB to OpenAI API. 
+        Engineered a customizable Jinja page for flexible OpenAI setting adjustments using Yaml and Flask integration.
+      </p>
+    ),
+  },
+  {
+    date: 'Sep. 2021 - Sep. 2022',
+    location: 'Quest2Learn',
+    title: 'Augmented Reality Programmer/Data Analysist',
+    content: (
+      <p>
+        Led a dynamic team to pioneer an AR-based distance learning app, simulating immersive lab environments for 100+ users. 
+        Utilized advanced data analysis (Pandas, Numpy), revealing a compelling 75% preference for Quest2Learn. 
+        Received 2021 DELTA Award and $50,000 grant for exceptional achievement.
+
       </p>
     ),
   },
@@ -340,23 +294,17 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'mkimykol225@gmail.com',
+      href: 'mailto:mkimykol225@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: 'Ridgefield NJ, USA',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'Kimpeppy',
+      href: 'https://github.com/Kimpeppy',
     },
   ],
 };
@@ -365,9 +313,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/tbakerx/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Kimpeppy'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/michael-kim-323780216/'}
 ];
